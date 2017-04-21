@@ -1,0 +1,11 @@
+<svg height="126" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="126" fill="#555" width="720"></rect>
+<text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
+<tspan x="10" y="26">80 megabytes installed</tspan>
+<tspan x="10" y="42"></tspan>
+<tspan x="10" y="58">node_modules</tspan>
+<tspan x="10" y="74">└── yargs@7.1.0 (get-caller-file@1.0.2, decamelize@1.2.0, y18n@3.2.1, camelcase@3.0.0, which-mod\</tspan>
+<tspan x="10" y="90">ule@1.0.0, set-blocking@2.0.0, yargs-parser@5.0.0, require-main-filename@1.0.1, require-director\</tspan>
+<tspan x="10" y="106">y@2.1.1, cliui@3.2.0, string-width@1.0.2, os-locale@1.4.0, read-pkg-up@1.0.1)</tspan>
+</text>
+</svg>

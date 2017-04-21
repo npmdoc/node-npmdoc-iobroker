@@ -1,0 +1,751 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://iobroker.net"
+
+    >iobroker (v0.9.0)</a>
+</h1>
+<h4>automate your life - platfom</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.iobroker">module iobroker</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">iobroker.</span>tools</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.iobroker.tools">module iobroker.tools</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.iobroker.tools.findIPs">
+            function <span class="apidocSignatureSpan">iobroker.tools.</span>findIPs
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.iobroker.tools.getAdapterDir">
+            function <span class="apidocSignatureSpan">iobroker.tools.</span>getAdapterDir
+            <span class="apidocSignatureSpan">(adapter, isNpm)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.iobroker.tools.getConfigFileName">
+            function <span class="apidocSignatureSpan">iobroker.tools.</span>getConfigFileName
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.iobroker.tools.getDefaultDataDir">
+            function <span class="apidocSignatureSpan">iobroker.tools.</span>getDefaultDataDir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.iobroker.tools.getFile">
+            function <span class="apidocSignatureSpan">iobroker.tools.</span>getFile
+            <span class="apidocSignatureSpan">(urlOrPath, fileName, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.iobroker.tools.getInstalledInfo">
+            function <span class="apidocSignatureSpan">iobroker.tools.</span>getInstalledInfo
+            <span class="apidocSignatureSpan">(hostRunningVersion)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.iobroker.tools.getJson">
+            function <span class="apidocSignatureSpan">iobroker.tools.</span>getJson
+            <span class="apidocSignatureSpan">(urlOrPath, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.iobroker.tools.getRepositoryFile">
+            function <span class="apidocSignatureSpan">iobroker.tools.</span>getRepositoryFile
+            <span class="apidocSignatureSpan">(urlOrPath, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.iobroker.tools.initNpm">
+            function <span class="apidocSignatureSpan">iobroker.tools.</span>initNpm
+            <span class="apidocSignatureSpan">(prefix, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.iobroker.tools.rmdirRecursiveSync">
+            function <span class="apidocSignatureSpan">iobroker.tools.</span>rmdirRecursiveSync
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.iobroker.tools.sendDiagInfo">
+            function <span class="apidocSignatureSpan">iobroker.tools.</span>sendDiagInfo
+            <span class="apidocSignatureSpan">(obj, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.iobroker" id="apidoc.module.iobroker">module iobroker</a></h1>
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.iobroker.tools" id="apidoc.module.iobroker.tools">module iobroker.tools</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.iobroker.tools.findIPs" id="apidoc.element.iobroker.tools.findIPs">
+        function <span class="apidocSignatureSpan">iobroker.tools.</span>findIPs
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findIPs() {
+    var ifaces = require(&#x27;os&#x27;).networkInterfaces();
+    var ipArr = [];
+    for (var dev in ifaces) {
+        /*jshint loopfunc:true */
+        ifaces[dev].forEach(function (details) {
+            if (!details.internal) ipArr.push(details.address);
+        });
+    }
+    return ipArr;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.iobroker.tools.getAdapterDir" id="apidoc.element.iobroker.tools.getAdapterDir">
+        function <span class="apidocSignatureSpan">iobroker.tools.</span>getAdapterDir
+        <span class="apidocSignatureSpan">(adapter, isNpm)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getAdapterDir(adapter, isNpm) {
+    var parts = __dirname.replace(/\\/g, &#x27;/&#x27;).split(&#x27;/&#x27;);
+    parts.splice(parts.length - 3, 3);
+    var dir = parts.join(&#x27;/&#x27;);
+    if (adapter.substring(0, &#x27;iobroker.&#x27;.length) === &#x27;iobroker.&#x27;) adapter = adapter.substring(&#x27;iobroker.&#x27;.length);
+
+    if (fs.existsSync(dir + &#x27;/node_modules/iobroker.js-controller&#x27;) &#x26;&#x26;
+        fs.existsSync(dir + &#x27;/node_modules/iobroker.&#x27; + adapter)) {
+        dir = __dirname.replace(/\\/g, &#x27;/&#x27;).split(&#x27;/&#x27;);
+        dir.splice(dir.length - 2, 2);
+        return dir.join(&#x27;/&#x27;) + &#x27;/iobroker.&#x27; + adapter;
+    } else if (fs.existsSync(__dirname + &#x27;/../node_modules/iobroker.&#x27; + adapter)) {
+        dir = __dirname.replace(/\\/g, &#x27;/&#x27;).split(&#x27;/&#x27;);
+        dir.splice(dir.length - 1, 1);
+        return dir.join(&#x27;/&#x27;) + &#x27;/node_modules/iobroker.&#x27; + adapter;
+    } else if (fs.existsSync(__dirname + &#x27;/../adapter/&#x27; + adapter)) {
+        dir = __dirname.replace(/\\/g, &#x27;/&#x27;).split(&#x27;/&#x27;);
+        dir.splice(dir.length - 1, 1);
+        return dir.join(&#x27;/&#x27;) + &#x27;/adapter/&#x27; + adapter;
+    } else {
+        if (isNpm) {
+            if (fs.existsSync(__dirname + &#x27;/../../node_modules/iobroker.js-controller&#x27;)) {
+                dir = __dirname.replace(/\\/g, &#x27;/&#x27;).split(&#x27;/&#x27;);
+                dir.splice(dir.length - 2, 2);
+                return dir.join(&#x27;/&#x27;) + &#x27;/iobroker.&#x27; + adapter;
+            } else {
+                dir = __dirname.replace(/\\/g, &#x27;/&#x27;).split(&#x27;/&#x27;);
+                dir.splice(dir.length - 1, 1);
+                return dir.join(&#x27;/&#x27;) + &#x27;/node_modules/iobroker.&#x27; + adapter;
+            }
+        } else {
+            dir = __dirname.replace(/\\/g, &#x27;/&#x27;).split(&#x27;/&#x27;);
+            dir.splice(dir.length - 1, 1);
+            return dir.join(&#x27;/&#x27;) + &#x27;/adapter/&#x27; + adapter;
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.iobroker.tools.getConfigFileName" id="apidoc.element.iobroker.tools.getConfigFileName">
+        function <span class="apidocSignatureSpan">iobroker.tools.</span>getConfigFileName
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getConfigFileName() {
+    var configDir = __dirname.replace(/\\/g, &#x27;/&#x27;);
+    configDir = configDir.split(&#x27;/&#x27;);
+
+    // If installed with npm
+    if (fs.existsSync(__dirname + &#x27;/../../../node_modules/iobroker.js-controller&#x27;) ||
+        fs.existsSync(__dirname + &#x27;/../../../node_modules/ioBroker.js-controller&#x27;)) {
+        // remove /node_modules/ioBroker.js-controller/lib
+        configDir.splice(configDir.length - 3, 3);
+        configDir = configDir.join(&#x27;/&#x27;);
+        return configDir + &#x27;/iobroker-data/iobroker.json&#x27;;
+    } else {
+        // Remove /lib
+        configDir.splice(configDir.length - 1, 1);
+        configDir = configDir.join(&#x27;/&#x27;);
+        if (fs.existsSync(__dirname + &#x27;/../conf/iobroker.json&#x27;)) {
+            return configDir + &#x27;/conf/iobroker.json&#x27;;
+        } else {
+            return configDir + &#x27;/data/iobroker.json&#x27;;
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.iobroker.tools.getDefaultDataDir" id="apidoc.element.iobroker.tools.getDefaultDataDir">
+        function <span class="apidocSignatureSpan">iobroker.tools.</span>getDefaultDataDir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getDefaultDataDir() {
+    var dataDir = __dirname.replace(/\\/g, &#x27;/&#x27;);
+    dataDir = dataDir.split(&#x27;/&#x27;);
+
+    // If installed with npm
+    if (fs.existsSync(__dirname + &#x27;/../../../node_modules/iobroker.js-controller&#x27;)) {
+        return &#x27;../../iobroker-data/&#x27;;
+    } else {
+        dataDir.splice(dataDir.length - 1, 1);
+        dataDir = dataDir.join(&#x27;/&#x27;);
+        return &#x27;./data/&#x27;;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.iobroker.tools.getFile" id="apidoc.element.iobroker.tools.getFile">
+        function <span class="apidocSignatureSpan">iobroker.tools.</span>getFile
+        <span class="apidocSignatureSpan">(urlOrPath, fileName, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getFile(urlOrPath, fileName, callback) {
+    if (!request) request = require(&#x27;request&#x27;);
+
+    // If object was read
+    if (urlOrPath.substring(0, &#x27;http://&#x27;.length)  === &#x27;http://&#x27; ||
+        urlOrPath.substring(0, &#x27;https://&#x27;.length) === &#x27;https://&#x27;) {
+        var tmpFile = __dirname + &#x27;/../tmp/&#x27; + (fileName || Math.floor(Math.random() * 0xFFFFFFE) + &#x27;.zip&#x27;);
+        request(urlOrPath).on(&#x27;error&#x27;, function (error) {
+            console.log(&#x27;Cannot download  &#x27; + tmpFile);
+            if (callback) callback(tmpFile);
+        }).pipe(fs.createWriteStream(tmpFile)).on(&#x27;close&#x27;, function () {
+            console.log(&#x27;downloaded &#x27; + tmpFile);
+            if (callback) callback(tmpFile);
+        });
+    } else {
+        if (fs.existsSync(urlOrPath)) {
+            if (callback) callback(urlOrPath);
+        } else
+        if (fs.existsSync(__dirname + &#x27;/../&#x27; + urlOrPath)) {
+            if (callback) callback(__dirname + &#x27;/../&#x27; + urlOrPath);
+        } else if (fs.existsSync(__dirname + &#x27;/../tmp/&#x27; + urlOrPath)) {
+            if (callback) callback(__dirname + &#x27;/../tmp/&#x27; + urlOrPath);
+        } else if (fs.existsSync(__dirname + &#x27;/../adapter/&#x27; + urlOrPath)) {
+            if (callback) callback(__dirname + &#x27;/../adapter/&#x27; + urlOrPath);
+        } else {
+            console.log(&#x27;File not found: &#x27; + urlOrPath);
+            process.exit(1);
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.iobroker.tools.getInstalledInfo" id="apidoc.element.iobroker.tools.getInstalledInfo">
+        function <span class="apidocSignatureSpan">iobroker.tools.</span>getInstalledInfo
+        <span class="apidocSignatureSpan">(hostRunningVersion)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getInstalledInfo(hostRunningVersion) {
+    var result = {};
+    var path = __dirname + &#x27;/../&#x27;;
+    // Get info about host
+    var ioPackage = JSON.parse(fs.readFileSync(path + &#x27;io-package.json&#x27;));
+    var package   = fs.existsSync(path + &#x27;package.json&#x27;) ? JSON.parse(fs.readFileSync(path + &#x27;package.json&#x27;)) : {};
+    result[ioPackage.common.name] = {
+        controller:     true,
+        version:        ioPackage.common.version,
+        icon:           ioPackage.common.extIcon || ioPackage.common.icon,
+        title:          ioPackage.common.title,
+        desc:           ioPackage.common.desc,
+        platform:       ioPackage.common.platform,
+        keywords:       ioPackage.common.keywords,
+        readme:         ioPackage.common.readme,
+        runningVersion: hostRunningVersion,
+        license:        ioPackage.common.license ? ioPackage.common.license : ((package.licenses &#x26;&#x26; package.licenses.length) ? package
+.licenses[0].type : &#x27;&#x27;),
+        licenseUrl:     (package.licenses &#x26;&#x26; package.licenses.length) ? package.licenses[0].url : &#x27;&#x27;
+    };
+    var dirs = fs.readdirSync(__dirname + &#x27;/../adapter&#x27;);
+    for (var i = 0; i &#x3c; dirs.length; i++) {
+        try {
+            path = __dirname + &#x27;/../adapter/&#x27; + dirs[i] + &#x27;/&#x27;;
+            if (fs.existsSync(path + &#x27;io-package.json&#x27;)) {
+                ioPackage = JSON.parse(fs.readFileSync(path + &#x27;io-package.json&#x27;));
+                package   = fs.existsSync(path + &#x27;package.json&#x27;) ? JSON.parse(fs.readFileSync(path + &#x27;package.json&#x27;)) : {};
+                result[ioPackage.common.name] = {
+                    controller: false,
+                    version:    ioPackage.common.version,
+                    icon:       ioPackage.common.extIcon || (ioPackage.common.icon ? &#x27;/adapter/&#x27; + dirs[i] + &#x27;/&#x27; + ioPackage.common
+.icon : &#x27;&#x27;),
+                    title:      ioPackage.common.title,
+                    desc:       ioPackage.common.desc,
+                    platform:   ioPackage.common.platform,
+                    keywords:   ioPackage.common.keywords,
+                    readme:     ioPackage.common.readme,
+                    type:       ioPackage.common.type,
+                    license:    ioPackage.common.license ? ioPackage.common.license : ((package.licenses &#x26;&#x26; package.licenses.length
+) ? package.licenses[0].type : &#x27;&#x27;),
+                    licenseUrl: (package.licenses &#x26;&#x26; package.licenses.length) ? package.licenses[0].url : &#x27;&#x27;
+                };
+            }
+        } catch (e) {
+            console.log(&#x27;Cannot read or parse &#x27; + __dirname + &#x27;/../adapter/&#x27; + dirs[i] + &#x27;/io-package.json: &#x27; + e.toString());
+        }
+    }
+    dirs = fs.readdirSync(__dirname + &#x27;/../node_modules&#x27;);
+    for (i = 0; i &#x3c; dirs.length; i++) {
+        try {
+            path = __dirname + &#x27;/../node_modules/&#x27; + dirs[i] + &#x27;/&#x27;;
+            if (dirs[i].match(/^iobroker\./i) &#x26;&#x26; fs.existsSync(path + &#x27;io-package.json&#x27;)) {
+                ioPackage = JSON.parse(fs.readFileSync(path + &#x27;io-package.json&#x27;));
+                package   = fs.existsSync(path + &#x27;package.json&#x27;) ? JSON.parse(fs.readFileSync(path + &#x27;package.json&#x27;)) : {};
+                result[ioPackage.common.name] = {
+                    controller: false,
+                    version:    ioPackage.common.version,
+                    icon:       ioPackage.common.extIcon || (ioPackage.common.icon ? &#x27;/adapter/&#x27; + dirs[i] + &#x27;/&#x27; + ioPackage.common
+.icon : &#x27;&#x27;),
+                    title:      ioPackage.common.title,
+                    desc:       ioPackage.common.desc,
+                    platform:   ioPackage.common.platform,
+                    keywords:   ioPackage.common.keywords,
+                    readme:     ioPackage.common.readme,
+                    type:       ioPackage.common.type,
+                    license:    ioPackage.common.license ? ioPackage.common.license : ((package.licenses &#x26;&#x26; package.licenses.length
+) ? package.licenses[0].type : &#x27;&#x27;),
+                    licenseUrl: (package.licenses &#x26;&#x26; package.licenses.length) ? package.licenses[0].url : &#x27;&#x27;
+                }; ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.iobroker.tools.getJson" id="apidoc.element.iobroker.tools.getJson">
+        function <span class="apidocSignatureSpan">iobroker.tools.</span>getJson
+        <span class="apidocSignatureSpan">(urlOrPath, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getJson(urlOrPath, callback) {
+    if (!request) request = require(&#x27;request&#x27;);
+    var sources = {};
+    // If object was read
+    if (urlOrPath &#x26;&#x26; typeof urlOrPath === &#x27;object&#x27;) {
+        if (callback) callback(urlOrPath);
+    } else
+    if (!urlOrPath) {
+        console.log(&#x27;Empty url!&#x27;);
+        if (callback) callback(null);
+    } else {
+        if (urlOrPath.substring(0, &#x27;http://&#x27;.length)  === &#x27;http://&#x27; ||
+            urlOrPath.substring(0, &#x27;https://&#x27;.length) === &#x27;https://&#x27;) {
+            request({url: urlOrPath, timeout: 5000}, function (error, response, body) {
+                if (error || !body || response.statusCode !== 200) {
+                    console.log(&#x27;Cannot download json from &#x27; + urlOrPath + &#x27;. Error: &#x27; + (error || body));
+                    if (callback) callback(null, urlOrPath);
+                    return;
+                }
+                try {
+                    sources = JSON.parse(body);
+                } catch (e) {
+                    console.log(&#x27;Json file is invalid on &#x27; + urlOrPath);
+                    if (callback) callback(null, urlOrPath);
+                    return;
+                }
+
+                if (callback) callback(sources, urlOrPath);
+            }).on(&#x27;error&#x27;, function (error) {
+                //console.log(&#x27;Cannot download json from &#x27; + urlOrPath + &#x27;. Error: &#x27; + error);
+                //if (callback) callback(null, urlOrPath);
+            });
+        } else {
+            if (fs.existsSync(urlOrPath)) {
+                try {
+                    sources = JSON.parse(fs.readFileSync(urlOrPath));
+                } catch (e) {
+                    console.log(&#x27;Cannot parse json file from &#x27; + urlOrPath + &#x27;. Error: &#x27; + e);
+                    if (callback) callback(null, urlOrPath);
+                    return;
+                }
+                if (callback) callback(sources, urlOrPath);
+            } else
+            if (fs.existsSync(__dirname + &#x27;/../&#x27; + urlOrPath)) {
+                try {
+                    sources = JSON.parse(fs.readFileSync(__dirname + &#x27;/../&#x27; + urlOrPath));
+                }catch (e) {
+                    console.log(&#x27;Cannot parse json file from &#x27; + __dirname + &#x27;/../&#x27; + urlOrPath + &#x27;. Error: &#x27; + e);
+                    if (callback) callback(null, urlOrPath);
+                    return;
+                }
+                if (callback) callback(sources, urlOrPath);
+            } else if (fs.existsSync(__dirname + &#x27;/../tmp/&#x27; + urlOrPath)) {
+                try {
+                    sources = JSON.parse(fs.readFileSync(__dirname + &#x27;/../tmp/&#x27; + urlOrPath));
+                } catch (e) {
+                    console.log(&#x27;Cannot parse json file from &#x27; + __dirname + &#x27;/../tmp/&#x27; + urlOrPath + &#x27;. Error: &#x27; + e);
+                    if (callback) callback(null, urlOrPath);
+                    return;
+                }
+                if (callback) callback(sources, urlOrPath);
+            } else if (fs.existsSync(__dirname + &#x27;/../adapter/&#x27; + urlOrPath)) {
+                try {
+                    sources = JSON.parse(fs.readFileSync(__dirname + &#x27;/../adapter/&#x27; + urlOrPath));
+                }catch (e) {
+                    console.log(&#x27;Cannot parse json file from &#x27; + __dirname + &#x27;/../adapter/&#x27; + urlOrPath + &#x27;. Error: &#x27; + e);
+                    if (callback) callback(null, urlOrPath);
+                    return;
+                }
+                if (callback) callback(sources, urlOrPath);
+            } else {
+                //if (urlOrPath.indexOf(&#x27;/example/&#x27;) === -1) console.log(&#x27;Json file not found: &#x27; + urlOrPath);
+                if (callback) callback(null, urlOrPath);
+                return;
+            }
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.iobroker.tools.getRepositoryFile" id="apidoc.element.iobroker.tools.getRepositoryFile">
+        function <span class="apidocSignatureSpan">iobroker.tools.</span>getRepositoryFile
+        <span class="apidocSignatureSpan">(urlOrPath, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getRepositoryFile(urlOrPath, callback) {
+    var sources = {};
+    var path =    &#x27;&#x27;;
+    var toRead =  0;
+    var timeout = null;
+    var count =   0;
+
+    if (!extend) extend = require(&#x27;node.extend&#x27;);
+
+    if (urlOrPath) {
+        var parts = urlOrPath.split(&#x27;/&#x27;);
+        path  = parts.splice(0, parts.length - 1).join(&#x27;/&#x27;) + &#x27;/&#x27;;
+    }
+
+    // If object was read
+    if (urlOrPath &#x26;&#x26; typeof urlOrPath === &#x27;object&#x27;) {
+        if (callback) callback(urlOrPath);
+    } else
+    if (!urlOrPath) {
+        try {
+            sources = JSON.parse(fs.readFileSync(__dirname + &#x27;/../conf/sources.json&#x27;));
+        } catch (e) {
+            sources = {};
+        }
+        try {
+            var sourcesDist = JSON.parse(fs.readFileSync(__dirname + &#x27;/../conf/sources-dist.json&#x27;));
+            sources = extend(true, sourcesDist, sources);
+        } catch (e) {
+
+        }
+
+        for (var name in sources) {
+            if (sources[name].url)  sources[name].url  = findPath(path, sources[name].url);
+            if (sources[name].meta) sources[name].meta = findPath(path, sources[name].meta);
+            if (sources[name].icon) sources[name].icon = findPath(path, sources[name].icon);
+
+            if (!sources[name].version &#x26;&#x26; sources[name].meta) {
+                toRead++;
+                count++;
+                getIoPack(sources, name, function (ignore, name) {
+                    toRead--;
+                    if (!toRead &#x26;&#x26; timeout) {
+                        clearTimeout(timeout);
+                        if (callback) callback(sources);
+                        timeout = null;
+                        callback = null;
+                    }
+                });
+            }
+        }
+
+        if (!toRead) {
+            if (callback) callback(sources);
+        } else {
+            timeout = setTimeout(function () {
+                if (timeout) {
+                    console.log(&#x27;Timeout by read all package.json (&#x27; + count + &#x27;) seconds&#x27;);
+                    clearTimeout(timeout);
+                    if (callback) callback(sources);
+                    timeout = null;
+                    callback = null;
+                }
+            }, count * 500);
+        }
+    } else {
+        getJson(urlOrPath, function (sources) {
+            if (sources) {
+                for (var name in sources) {
+                    if (sources[name].url)  sources[name].url  = findPath(path, sources[name].url);
+                    if (sources[name].meta) sources[name].meta = findPath(path, sources[name].meta);
+                    if (sources[name].icon) sources[name].icon = findPath(path, sources[name].icon);
+
+                    if (!sources[name].version &#x26;&#x26; sources[name].meta) {
+                        toRead++;
+                        count++;
+                        getIoPack(sources, name, function (ignore, name) {
+                            toRead--;
+                            if (!toRead &#x26;&#x26; timeout) {
+                                clearTimeout(timeout);
+                                if (callback) callback(sources);
+                                timeout = null;
+                                callback = null;
+                            }
+                        });
+                    }
+                }
+            }
+            if (!toRead) {
+                if (callback) callback(sources);
+            } else {
+                timeout = setTimeout(function () {
+                    if (timeout) {
+                        console.log(&#x27;Timeout by read all package.json (&#x27; + count + &#x27;) seconds&#x27;);
+                        clearTimeout(timeout);
+                        if (callback) callback(sources);
+                        timeout = null;
+                        callback = null;
+                    }
+                }, count * 500);
+            }
+        });
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.iobroker.tools.initNpm" id="apidoc.element.iobroker.tools.initNpm">
+        function <span class="apidocSignatureSpan">iobroker.tools.</span>initNpm
+        <span class="apidocSignatureSpan">(prefix, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initNpm(prefix, callback) {
+    if (typeof prefix === &#x27;function&#x27;) {
+        callback = prefix;
+        prefix = undefined;
+    }
+
+    var settings = {
+        silent: true,
+        global: false,
+        production: true,
+        minTimeout: 500,
+        maxTimeout: 1500,
+        times: 1
+    };
+    if (prefix) settings.prefix = prefix;
+
+    var npm = require(&#x27;npm&#x27;);
+    npm.load(settings, function (er) {
+        // Disable debug outputs
+        npm.registry.log.silly   = function () {};
+        npm.registry.log.verbose = function () {};
+        npm.registry.log.info    = function () {};
+        npm.registry.log.http    = function () {};
+        if (callback) callback(er, npm);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.iobroker.tools.rmdirRecursiveSync" id="apidoc.element.iobroker.tools.rmdirRecursiveSync">
+        function <span class="apidocSignatureSpan">iobroker.tools.</span>rmdirRecursiveSync
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rmdirRecursiveSync(path) {
+    if (fs.existsSync(path)) {
+        fs.readdirSync(path).forEach(function (file, index) {
+            var curPath = path + &#x27;/&#x27; + file;
+            if (fs.statSync(curPath).isDirectory()) {
+                // recurse
+                rmdirRecursiveSync(curPath);
+            } else {
+                // delete file
+                fs.unlinkSync(curPath);
+            }
+        });
+        // delete (hopefully) empty folder
+        try {
+            fs.rmdirSync(path);
+        } catch (e) {
+            console.log(&#x27;Cannot delete directory &#x27; + path + &#x27;: &#x27; + e.toString());
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.iobroker.tools.sendDiagInfo" id="apidoc.element.iobroker.tools.sendDiagInfo">
+        function <span class="apidocSignatureSpan">iobroker.tools.</span>sendDiagInfo
+        <span class="apidocSignatureSpan">(obj, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sendDiagInfo(obj, callback) {
+    if (!request) request = require(&#x27;request&#x27;);
+    request.post({
+        url:    &#x27;http://download.iobroker.org/diag.php&#x27;,
+        method: &#x27;POST&#x27;,
+        headers: {&#x27;content-type&#x27;: &#x27;application/x-www-form-urlencoded&#x27;},
+        body:    &#x22;data=&#x22; + JSON.stringify(obj),
+        timeout: 2000
+    }, function (err, response, body) {
+        /*if (err || !body || response.statusCode !== 200) {
+
+        }*/
+    }).on(&#x27;error&#x27;, function (error) {
+        console.log(&#x22;Cannot send diag info: &#x22; + error.message);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
